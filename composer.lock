@@ -4,8 +4,53 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b526207cf1dc4de553e7ce08de95f8b",
-    "packages": [],
+    "content-hash": "d293790a61704540eeb25e5f0a074281",
+    "packages": [
+        {
+            "name": "live-controls/utils",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/live-controls/utils.git",
+                "reference": "1ec87c0f0b4926780196127f5d739efff60d94f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/live-controls/utils/zipball/1ec87c0f0b4926780196127f5d739efff60d94f9",
+                "reference": "1ec87c0f0b4926780196127f5d739efff60d94f9",
+                "shasum": ""
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LiveControls\\Utils\\UtilsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LiveControls\\Utils\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Roman Wanner",
+                    "email": "60240491+daredloco@users.noreply.github.com"
+                }
+            ],
+            "description": "Utils package for live-controls",
+            "support": {
+                "issues": "https://github.com/live-controls/utils/issues",
+                "source": "https://github.com/live-controls/utils/tree/v1.0"
+            },
+            "time": "2023-07-22T14:23:10+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "brick/math",
