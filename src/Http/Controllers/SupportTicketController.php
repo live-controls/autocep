@@ -1,8 +1,8 @@
 <?php
 
-namespace Helvetiapps\LiveControls\Http\Controllers;
+namespace LiveControls\Http\Controllers;
 
-use Helvetiapps\LiveControls\Models\Support\SupportTicket;
+use LiveControls\Models\Support\SupportTicket;
 use Illuminate\Http\Request;
 
 class SupportTicketController extends Controller

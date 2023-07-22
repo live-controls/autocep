@@ -1,6 +1,6 @@
 <?php
 
-namespace Helvetiapps\LiveControls\Http\Controllers;
+namespace LiveControls\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;

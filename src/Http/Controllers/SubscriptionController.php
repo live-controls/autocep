@@ -1,8 +1,8 @@
 <?php
 
-namespace Helvetiapps\LiveControls\Http\Controllers;
+namespace LiveControls\Http\Controllers;
 
-use Helvetiapps\LiveControls\Models\Subscriptions\Subscription;
+use LiveControls\Models\Subscriptions\Subscription;
 use Illuminate\Http\Request;
 
 class SubscriptionController extends Controller

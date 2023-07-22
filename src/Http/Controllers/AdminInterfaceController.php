@@ -1,6 +1,6 @@
 <?php
 
-namespace Helvetiapps\LiveControls\Http\Controllers;
+namespace LiveControls\Http\Controllers;
 
 class AdminInterfaceController extends Controller
 {

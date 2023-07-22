@@ -1,8 +1,8 @@
 <?php
 
-namespace Helvetiapps\LiveControls\Http\Controllers;
+namespace LiveControls\Http\Controllers;
 
-use Helvetiapps\LiveControls\Models\UserGroups\UserGroup;
+use LiveControls\Models\UserGroups\UserGroup;
 use Illuminate\Http\Request;
 
 class UserGroupController extends Controller
