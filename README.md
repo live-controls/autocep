@@ -20,11 +20,11 @@
 
 ## Installation
 
-1. Run 
+1. Install Utils package
 ```ps 
 composer require live-controls/utils
 ```
-2. Run
+2. Install AutoCep package
 ```ps
 composer require live-controls/autocep
 ```
