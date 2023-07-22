@@ -6,10 +6,7 @@
 
 ## Requirements
 - Laravel 9+
-- JetStream
 - Livewire 2+
-- Fortify
-- [JetStrap](https://github.com/nascent-africa/jetstrap)
 
 
 ## Translations
@@ -20,11 +17,7 @@
 
 ## Installation
 
-1. Install Utils package
-```ps 
-composer require live-controls/utils
-```
-2. Install AutoCep package
+1. Install AutoCep package
 ```ps
 composer require live-controls/autocep
 ```
