@@ -6,7 +6,7 @@ use LiveControls\Http\Livewire\AutoCEP\AutoCep;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
 
-class LiveControlsServiceProvider extends ServiceProvider
+class AutoCepServiceProvider extends ServiceProvider
 {
   public function register()
   {
