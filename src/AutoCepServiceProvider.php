@@ -1,6 +1,6 @@
 <?php
 
-namespace LiveControls;
+namespace LiveControls\AutoCep;
 
 use LiveControls\Http\Livewire\AutoCEP\AutoCep;
 use Illuminate\Support\ServiceProvider;
