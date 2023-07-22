@@ -36,4 +36,21 @@ composer require live-controls/autocep
 
 
 ## Usage
-TODO
+First Step:
+You will need to create a CEPABERTO_TOKEN environment variable. You will get the token after registration from https://www.cepaberto.com/
+
+Blade:
+```php
+@livewire('livecontrols-autocep', [
+'prefix' => 'student',
+'titlesuffix' => '*',
+'oldmodel' => $student,
+'required' => true,
+], key('autocep'))
+```
+* prefix = The prefix is optional, but needed if you add more than one AutoCep component on a single page. It will be prefix_road etc. afterwards
+* titlesuffix = The suffix of the title, usually you'd set a * if they're required or such.
+* oldmodel = This is optional, if set, it will take the cep, street, bairro, uf and city of the model
+* required = If set to true it will set all inputs to "required"
+
+**Important: In case you want to use more than one AutoCEP component, don't forget to add a "prefix" so the informations won't be overwritten!**
