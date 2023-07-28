@@ -132,6 +132,7 @@
             <label for="{{ $prefix }}city" class="label">
                 <span class="label-text">
                     {{ __('livecontrols-autocep::autocep.city') }}
+                    @if($titlesuffix != '') {{ $titlesuffix }} @endif
                 </span>
             </label>
             <input
@@ -141,6 +142,7 @@
                 class="input input-bordered w-full"
                 wire:model='city'
                 value="{{ is_null($oldmodel) ? old($prefix.'city') : old($prefix.'city', $oldmodel->{$prefix.'city'}) }}"
+                @if($required) required @endif
             />
             <x-input-error for="{{ $prefix }}city"></x-input-error>
         </div>
