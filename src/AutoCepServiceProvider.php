@@ -24,7 +24,7 @@ class AutoCepServiceProvider extends ServiceProvider
     ], 'livecontrols.autocep.localization');
 
     $this->publishes([
-      __DIR__.'/../resources/views/livewire/autocep' => $this->app->resourcePath('views/vendor/livecontrols/autocep')
+      __DIR__.'/../resources/views/livewire' => $this->app->resourcePath('views/vendor/livecontrols/autocep')
     ], 'livecontrols.autocep.views');
   }
 }
