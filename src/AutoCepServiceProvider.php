@@ -20,7 +20,11 @@ class AutoCepServiceProvider extends ServiceProvider
     Livewire::component('livecontrols-autocep', AutoCep::class);
   
     $this->publishes([
-      __DIR__.'/../lang' => $this->app->langPath('vendor/livecontrols'),
-    ], 'livecontrols-localization');
+      __DIR__.'/../lang' => $this->app->langPath('vendor/livecontrols/autocep'),
+    ], 'livecontrols.autocep.localization');
+
+    $this->publishes([
+      __DIR__.'/../resources/views/livewire/autocep' => resource_path('views/vendor/livecontrols/autocep')
+    ], 'livecontrols.autocep.views');
   }
 }
