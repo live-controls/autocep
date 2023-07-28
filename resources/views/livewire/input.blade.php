@@ -108,22 +108,22 @@
             <x-input-error for="{{ $prefix }}complement"></x-input-error>
         </div>
         <div class="form-control w-auto">
-            <label for="{{ $prefix }}bairro" class="label">
+            <label for="{{ $prefix }}area" class="label">
                 <span class="label-text">
                     {{ __('livecontrols-autocep::autocep.area') }}
                     @if($titlesuffix != '') {{ $titlesuffix }} @endif
                 </span>
             </label>
             <input
-                id="{{ $prefix }}bairro"
-                name="{{ $prefix }}bairro"
+                id="{{ $prefix }}area"
+                name="{{ $prefix }}area"
                 type="text"
                 class="input input-bordered w-full"
-                wire:model='bairro'
-                value="{{ is_null($oldmodel) ? old($prefix.'bairro') : old($prefix.'bairro', $oldmodel->{$prefix.'bairro'}) }}"
+                wire:model='area'
+                value="{{ is_null($oldmodel) ? old($prefix.'area') : old($prefix.'area', $oldmodel->{$prefix.'area'}) }}"
                 @if($required) required @endif
             />
-            <x-input-error for="{{ $prefix }}bairro"></x-input-error>
+            <x-input-error for="{{ $prefix }}area"></x-input-error>
         </div>
     </div>
 

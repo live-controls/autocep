@@ -19,7 +19,7 @@ class AutoCep extends Component
     public $cep = null;
     public $oldcep = null;
     public $street = '';
-    public $bairro = '';
+    public $area = '';
     public $uf = '';
     public $city = '';
 
@@ -41,7 +41,7 @@ class AutoCep extends Component
             $this->firststart = true;
             $this->cep = $this->oldmodel->{$this->prefix.'areacode'};
             $this->street = $this->oldmodel->{$this->prefix.'road'};
-            $this->bairro = $this->oldmodel->{$this->prefix.'bairro'};
+            $this->area = $this->oldmodel->{$this->prefix.'area'};
             $this->uf = $this->oldmodel->{$this->prefix.'state'};
             $this->city = $this->oldmodel->{$this->prefix.'city'};
         }
@@ -83,7 +83,7 @@ class AutoCep extends Component
         {
             $this->uf = $result["estado"]["sigla"];
             $this->city = $result["cidade"]["nome"];
-            $this->bairro = $result["bairro"];
+            $this->area = $result["area"];
             $this->street = $result["logradouro"];
         }elseif($result["statusText"] = 'invalid')
         {
