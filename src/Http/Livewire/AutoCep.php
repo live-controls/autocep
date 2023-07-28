@@ -83,7 +83,7 @@ class AutoCep extends Component
         {
             $this->uf = $result["estado"]["sigla"];
             $this->city = $result["cidade"]["nome"];
-            $this->area = $result["area"];
+            $this->area = $result["bairro"];
             $this->street = $result["logradouro"];
         }elseif($result["statusText"] = 'invalid')
         {
