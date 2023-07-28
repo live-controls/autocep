@@ -4,6 +4,7 @@ namespace LiveControls\Http\Livewire\AutoCEP;
 
 use LiveControls\Scripts\AutoCep\GetCEP;
 use Illuminate\Support\Facades\Log;
+use LiveControls\Utils\Utils;
 use Livewire\Component;
 
 class AutoCep extends Component
