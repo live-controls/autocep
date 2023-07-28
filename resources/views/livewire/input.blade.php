@@ -55,22 +55,22 @@
 
     <div class="grid grid-cols-3 gap-2">
         <div class="form-control w-auto col-span-2">
-            <label for="{{ $prefix }}road" class="label">
+            <label for="{{ $prefix }}street" class="label">
                 <span class="label-text">
-                    {{ __('livecontrols-autocep::autocep.road') }}
+                    {{ __('livecontrols-autocep::autocep.street') }}
                     @if($titlesuffix != '') {{ $titlesuffix }} @endif
                 </span>
             </label>
             <input
-                id="{{ $prefix }}road"
-                name="{{ $prefix }}road"
+                id="{{ $prefix }}street"
+                name="{{ $prefix }}street"
                 type="text"
                 class="input input-bordered w-full"
                 wire:model='street'
-                value="{{ is_null($oldmodel) ? old($prefix.'road') : old($prefix.'road', $oldmodel->{$prefix.'road'}) }}"
+                value="{{ is_null($oldmodel) ? old($prefix.'street') : old($prefix.'street', $oldmodel->{$prefix.'street'}) }}"
                 @if($required) required @endif
             />
-            <x-input-error for="{{ $prefix }}road"></x-input-error>
+            <x-input-error for="{{ $prefix }}street"></x-input-error>
         </div>
         <div class="form-control w-auto">
             <label for="{{ $prefix }}housenumber" class="label">

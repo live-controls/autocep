@@ -4,7 +4,7 @@ return [
     'areacode' => 'CEP',
     'searching' => 'Pesquisar...',
     'invalid_areacode' => 'CEP inválido',
-    'road' => 'Rua',
+    'street' => 'Rua',
     'number' => 'Número',
     'complement' => 'Complemento',
     'area' => 'Bairro',

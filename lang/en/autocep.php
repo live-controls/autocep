@@ -4,7 +4,7 @@ return [
     'areacode' => 'Areacode',
     'searching' => 'Searching...',
     'invalid_areacode' => 'Invalid Areacode',
-    'road' => 'Road',
+    'street' => 'Street',
     'number' => 'Number',
     'complement' => 'Complement',
     'area' => 'Area',

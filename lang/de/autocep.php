@@ -4,7 +4,7 @@ return [
     'areacode' => 'Postleitzahl',
     'searching' => 'Suche...',
     'invalid_areacode' => 'Ungültige Postleitzahl',
-    'road' => 'Strasse',
+    'street' => 'Strasse',
     'number' => 'Nummer',
     'complement' => 'Zusatz',
     'area' => 'Bezirk',
