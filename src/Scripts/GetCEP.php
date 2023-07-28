@@ -1,6 +1,6 @@
 <?php 
 
-namespace LiveControls\Scripts\AutoCep;
+namespace LiveControls\AutoCep\Scripts;
 
 use Exception;
 use GuzzleHttp\Client;

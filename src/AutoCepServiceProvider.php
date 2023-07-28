@@ -14,8 +14,8 @@ class AutoCepServiceProvider extends ServiceProvider
 
   public function boot()
   {
-    $this->loadTranslationsFrom(__DIR__.'/../lang', 'livecontrols');
-    $this->loadViewsFrom(__DIR__.'/../resources/views', 'livecontrols');
+    $this->loadTranslationsFrom(__DIR__.'/../lang', 'livecontrols-autocep');
+    $this->loadViewsFrom(__DIR__.'/../resources/views', 'livecontrols-autocep');
 
     Livewire::component('livecontrols-autocep', AutoCep::class);
   

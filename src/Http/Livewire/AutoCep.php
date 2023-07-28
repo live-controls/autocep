@@ -1,8 +1,8 @@
 <?php
 
-namespace LiveControls\Http\Livewire\AutoCEP;
+namespace LiveControls\AutoCep\Http\Livewire;
 
-use LiveControls\Scripts\AutoCep\GetCEP;
+use LiveControls\AutoCep\Scripts\GetCEP;
 use Illuminate\Support\Facades\Log;
 use LiveControls\Utils\Utils;
 use Livewire\Component;
@@ -55,7 +55,7 @@ class AutoCep extends Component
             $this->oldcep = $this->cep;
         }
         $this->firststart = false;
-        return view('livecontrols::livewire.autocep.input');
+        return view('livecontrols-autocep::livewire.input');
     }
 
     public function updated($name, $value)
