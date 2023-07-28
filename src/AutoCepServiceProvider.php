@@ -2,7 +2,7 @@
 
 namespace LiveControls\AutoCep;
 
-use LiveControls\Http\Livewire\AutoCEP\AutoCep;
+use LiveControls\AutoCep\Http\Livewire\AutoCep;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
 
