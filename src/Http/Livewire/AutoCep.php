@@ -81,10 +81,10 @@ class AutoCep extends Component
         $result = GetCEP::get($this->cep);
         if($result["statusText"] == 'ok')
         {
-            $this->uf = $result["estado"]["sigla"];
-            $this->city = $result["cidade"]["nome"];
-            $this->area = $result["bairro"];
-            $this->street = $result["logradouro"];
+            $this->uf = array_key_exists('estado', $result) ? $result["estado"]["sigla"] : '';
+            $this->city = array_key_exists('cidade', $result) ? $result["cidade"]["nome"] : '';
+            $this->area = array_key_exists('bairro', $result) ? $result["bairro"] : '';
+            $this->street = array_key_exists('lograduro', $result) ? $result["logradouro"] : '';
         }elseif($result["statusText"] = 'invalid')
         {
             $this->valid = 0;
