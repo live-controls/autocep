@@ -41,7 +41,7 @@ Blade:
 'required' => true,
 ], key('autocep'))
 ```
-* prefix = The prefix is optional, but needed if you add more than one AutoCep component on a single page. It will be prefix_road etc. afterwards
+* prefix = The prefix is optional, but needed if you add more than one AutoCep component on a single page. It will be prefixroad etc. afterwards
 * titlesuffix = The suffix of the title, usually you'd set a * if they're required or such.
 * oldmodel = This is optional, if set, it will take the cep, street, bairro, uf and city of the model
 * required = If set to true it will set all inputs to "required"
