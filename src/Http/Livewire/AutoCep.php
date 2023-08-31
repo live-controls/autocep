@@ -96,7 +96,7 @@ class AutoCep extends Component
             $this->city = array_key_exists('cidade', $result) ? $result["cidade"]["nome"] : '';
             $this->area = array_key_exists('bairro', $result) ? $result["bairro"] : '';
             $this->street = array_key_exists('logradouro', $result) ? $result["logradouro"] : '';
-        }elseif($result["statusText"] = 'invalid')
+        }elseif($result["statusText"] == 'invalid')
         {
             $this->valid = 0;
         }elseif($result["statusText"] == 'no_connection')
