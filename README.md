@@ -41,9 +41,19 @@ Blade:
 'required' => true,
 ], key('autocep'))
 ```
-* prefix = The prefix is optional, but needed if you add more than one AutoCep component on a single page. It will be prefix_road etc. afterwards
+* prefix = The prefix is optional, but needed if you add more than one AutoCep component on a single page. It will be prefixroad etc. afterwards
 * titlesuffix = The suffix of the title, usually you'd set a * if they're required or such.
 * oldmodel = This is optional, if set, it will take the cep, street, bairro, uf and city of the model
 * required = If set to true it will set all inputs to "required"
 
-**Important: In case you want to use more than one AutoCEP component, don't forget to add a "prefix" so the informations won't be overwritten!**
+*From 1.1.6 on*
+* areacodeName = The name/id of the areacode control (Default: areacode)
+* streetName = The name/id of the street control (Default: street)
+* numberName = The name/id of the housenumber control (Default: housenumber)
+* complementName = The name/id of the complement control (Default: complement)
+* areaName = The name/id of the area control (Default: area)
+* cityName = The name/id of the city control (Default: city)
+* ufName = The name/id of the UF/2-digit state control (Default: uf)
+* countryName = The name/id of the (hidden) country control (Default: country)
+
+**Important: In case you want to use more than one AutoCEP component, don't forget to add a "prefix" or change the areacodeName etc of the components so the informations won't be overwritten!**

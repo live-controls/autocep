@@ -4,8 +4,8 @@
         @push('scripts')
         <script src="https://unpkg.com/imask"></script>
         <script type="text/javascript">
-            window.{{ $prefix }}areacodemask = IMask(
-                document.getElementById('{{ $prefix }}areacode'),
+            window.{{ $prefix.$areacodeName }}mask = IMask(
+                document.getElementById('{{ $prefix.$areacodeName }}'),
                 {
                     mask: '00000-000'
                 }
@@ -13,12 +13,12 @@
 
             document.addEventListener("DOMContentLoaded", () => {
                 @if(!is_null($cep))
-                    window.{{ $prefix }}areacodemask.value = "{{ $cep }}";
+                    window.{{ $prefix.$areacodeName }}mask.value = "{{ $cep }}";
                 @endif
             });
 
-            Livewire.on('{{ $prefix }}areacode-valueUpdated', value => {
-                @this.cep = window.{{ $prefix }}areacodemask.unmaskedValue;
+            Livewire.on('{{ $prefix.$areacodeName }}-valueUpdated', value => {
+                @this.cep = window.{{ $prefix.$areacodeName }}mask.unmaskedValue;
                 Livewire.emit('cepUpdated');
             });
         </script>
@@ -27,22 +27,22 @@
 
     <!-- AUTOCEP CONTENT -->
     <div class="form-control w-1/2">
-        <label for="{{ $prefix }}areacode" class="label">
+        <label for="{{ $prefix.$areacodeName }}" class="label">
             <span class="label-text">
                 {{ __('livecontrols-autocep::autocep.areacode') }}
                 @if($titlesuffix != '') {{ $titlesuffix }} @endif
             </span>
         </label>
         <input
-            id="{{ $prefix }}areacode"
-            name="{{ $prefix }}areacode"
+            id="{{ $prefix.$areacodeName }}"
+            name="{{ $prefix.$areacodeName }}"
             type="text"
             class="input input-bordered w-full"
             wire:model.debounce.250ms='cepvalue'
-            value="{{ is_null($oldmodel) ? old($prefix.'areacode') : old($prefix.'areacode', $oldmodel->{$prefix.'areacode'}) }}"
+            value="{{ is_null($oldmodel) ? old($prefix.$areacodeName) : old($prefix.$areacodeName, $oldmodel->{$prefix.$areacodeName}) }}"
             @if($required) required @endif
         />
-        <x-input-error for="{{ $prefix }}areacode"></x-input-error>
+        <x-input-error for="{{ $prefix.$areacodeName }}"></x-input-error>
         <p wire:loading wire:target='fetchInfos'>
             {{ __('livecontrols-autocep::autocep.searching') }}
         </p>
@@ -55,119 +55,119 @@
 
     <div class="grid grid-cols-3 gap-2">
         <div class="form-control w-auto col-span-2">
-            <label for="{{ $prefix }}street" class="label">
+            <label for="{{ $prefix.$streetName }}" class="label">
                 <span class="label-text">
                     {{ __('livecontrols-autocep::autocep.street') }}
                     @if($titlesuffix != '') {{ $titlesuffix }} @endif
                 </span>
             </label>
             <input
-                id="{{ $prefix }}street"
-                name="{{ $prefix }}street"
+                id="{{ $prefix.$streetName }}"
+                name="{{ $prefix.$streetName }}"
                 type="text"
                 class="input input-bordered w-full"
                 wire:model='street'
-                value="{{ is_null($oldmodel) ? old($prefix.'street') : old($prefix.'street', $oldmodel->{$prefix.'street'}) }}"
+                value="{{ is_null($oldmodel) ? old($prefix.$streetName) : old($prefix.$streetName, $oldmodel->{$prefix.$streetName}) }}"
                 @if($required) required @endif
             />
-            <x-input-error for="{{ $prefix }}street"></x-input-error>
+            <x-input-error for="{{ $prefix.$streetName }}"></x-input-error>
         </div>
         <div class="form-control w-auto">
-            <label for="{{ $prefix }}housenumber" class="label">
+            <label for="{{ $prefix.$numberName }}" class="label">
                 <span class="label-text">
                     {{ __('livecontrols-autocep::autocep.number') }}
                     @if($titlesuffix != '') {{ $titlesuffix }} @endif
                 </span>
             </label>
             <input
-                id="{{ $prefix }}housenumber"
-                name="{{ $prefix }}housenumber"
+                id="{{ $prefix.$numberName }}"
+                name="{{ $prefix.$numberName }}"
                 type="text"
                 class="input input-bordered w-full"
-                value="{{ is_null($oldmodel) ? old($prefix.'housenumber') : old($prefix.'housenumber', $oldmodel->{$prefix.'housenumber'}) }}"
+                value="{{ is_null($oldmodel) ? old($prefix.$numberName) : old($prefix.$numberName, $oldmodel->{$prefix.$numberName}) }}"
                 @if($required) required @endif
             />
-            <x-input-error for="{{ $prefix }}housenumber"></x-input-error>
+            <x-input-error for="{{ $prefix.$numberName }}"></x-input-error>
         </div>
     </div>
 
     <div class="grid grid-cols-2 gap-2">
         <div class="form-control w-auto">
-            <label for="{{ $prefix }}complement" class="label">
+            <label for="{{ $prefix.$complementName }}" class="label">
                 <span class="label-text">
                     {{ __('livecontrols-autocep::autocep.complement') }}
                 </span>
             </label>
             <input
-                id="{{ $prefix }}complement"
-                name="{{ $prefix }}complement"
+                id="{{ $prefix.$complementName }}"
+                name="{{ $prefix.$complementName }}"
                 type="text"
                 class="input input-bordered w-full"
-                value="{{ is_null($oldmodel) ? old($prefix.'complement') : old($prefix.'complement', $oldmodel->{$prefix.'complement'}) }}"
+                value="{{ is_null($oldmodel) ? old($prefix.$complementName) : old($prefix.$complementName, $oldmodel->{$prefix.$complementName}) }}"
             />
-            <x-input-error for="{{ $prefix }}complement"></x-input-error>
+            <x-input-error for="{{ $prefix.$complementName }}"></x-input-error>
         </div>
         <div class="form-control w-auto">
-            <label for="{{ $prefix }}area" class="label">
+            <label for="{{ $prefix.$areaName }}" class="label">
                 <span class="label-text">
                     {{ __('livecontrols-autocep::autocep.area') }}
                     @if($titlesuffix != '') {{ $titlesuffix }} @endif
                 </span>
             </label>
             <input
-                id="{{ $prefix }}area"
-                name="{{ $prefix }}area"
+                id="{{ $prefix.$areaName }}"
+                name="{{ $prefix.$areaName }}"
                 type="text"
                 class="input input-bordered w-full"
                 wire:model='area'
-                value="{{ is_null($oldmodel) ? old($prefix.'area') : old($prefix.'area', $oldmodel->{$prefix.'area'}) }}"
+                value="{{ is_null($oldmodel) ? old($prefix.$areaName) : old($prefix.$areaName, $oldmodel->{$prefix.$areaName}) }}"
                 @if($required) required @endif
             />
-            <x-input-error for="{{ $prefix }}area"></x-input-error>
+            <x-input-error for="{{ $prefix.$areaName }}"></x-input-error>
         </div>
     </div>
 
     <div class="grid grid-cols-5 gap-2">
         <div class="form-control w-auto col-span-4">
-            <label for="{{ $prefix }}city" class="label">
+            <label for="{{ $prefix.$cityName }}" class="label">
                 <span class="label-text">
                     {{ __('livecontrols-autocep::autocep.city') }}
                     @if($titlesuffix != '') {{ $titlesuffix }} @endif
                 </span>
             </label>
             <input
-                id="{{ $prefix }}city"
-                name="{{ $prefix }}city"
+                id="{{ $prefix.$cityName }}"
+                name="{{ $prefix.$cityName }}"
                 type="text"
                 class="input input-bordered w-full"
                 wire:model='city'
-                value="{{ is_null($oldmodel) ? old($prefix.'city') : old($prefix.'city', $oldmodel->{$prefix.'city'}) }}"
+                value="{{ is_null($oldmodel) ? old($prefix.$cityName) : old($prefix.$cityName, $oldmodel->{$prefix.$cityName}) }}"
                 @if($required) required @endif
             />
-            <x-input-error for="{{ $prefix }}city"></x-input-error>
+            <x-input-error for="{{ $prefix.$cityName }}"></x-input-error>
         </div>
         <div class="form-control w-auto">
-            <label for="{{ $prefix }}uf" class="label">
+            <label for="{{ $prefix.$ufName }}" class="label">
                 <span class="label-text">
                     {{ __('livecontrols-autocep::autocep.state') }}
                     @if($titlesuffix != '') {{ $titlesuffix }} @endif
                 </span>
             </label>
             <input
-                id="{{ $prefix }}uf"
-                name="{{ $prefix }}uf"
+                id="{{ $prefix.$ufName }}"
+                name="{{ $prefix.$ufName }}"
                 type="text"
                 maxlength="2"
                 class="input input-bordered w-full"
                 wire:model='uf'
-                value="{{ is_null($oldmodel) ? old($prefix.'uf') : old($prefix.'uf', $oldmodel->{$prefix.'uf'}) }}"
+                value="{{ is_null($oldmodel) ? old($prefix.$ufName) : old($prefix.$ufName, $oldmodel->{$prefix.$ufName}) }}"
                 @if($required) required @endif
             />
-            <x-input-error for="{{ $prefix }}uf"></x-input-error>
+            <x-input-error for="{{ $prefix.$ufName }}"></x-input-error>
         </div>
     </div>
 
-    <input type="hidden" name="{{ $prefix }}country" value="Brazil">
+    <input type="hidden" name="{{ $prefix.$countryName }}" value="Brazil">
 
     <!-- /AUTOCEP CONTENT -->
 
