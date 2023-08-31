@@ -56,4 +56,4 @@ Blade:
 * ufName = The name/id of the UF/2-digit state control (Default: uf)
 * countryName = The name/id of the (hidden) country control (Default: country)
 
-**Important: In case you want to use more than one AutoCEP component, don't forget to add a "prefix" so the informations won't be overwritten!**
+**Important: In case you want to use more than one AutoCEP component, don't forget to add a "prefix" or change the areacodeName etc of the components so the informations won't be overwritten!**
