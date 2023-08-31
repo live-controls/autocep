@@ -27,6 +27,17 @@ class AutoCep extends Component
 
     private bool $firststart = false;
 
+
+    //CUSTOM FORM CONTROL NAMES
+    public $areacodeName = 'areacode';
+    public $streetName = 'street';
+    public $numberName = 'housenumber';
+    public $complementName = 'complement';
+    public $areaName = 'area';
+    public $cityName = 'city';
+    public $ufName = 'uf';
+    public $countryName = 'country';
+
     protected $listeners = [
         'cepUpdated' => 'fetchInfos'
     ];
@@ -62,7 +73,7 @@ class AutoCep extends Component
     {
         if($name == "cepvalue")
         {
-            $this->emit($this->prefix.'areacode-valueUpdated', ['value' => $value]);
+            $this->emit($this->prefix.$this->areacodeName.'-valueUpdated', ['value' => $value]);
         }
     }
 
