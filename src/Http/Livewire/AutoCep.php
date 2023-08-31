@@ -95,7 +95,7 @@ class AutoCep extends Component
             $this->uf = array_key_exists('estado', $result) ? $result["estado"]["sigla"] : '';
             $this->city = array_key_exists('cidade', $result) ? $result["cidade"]["nome"] : '';
             $this->area = array_key_exists('bairro', $result) ? $result["bairro"] : '';
-            $this->street = array_key_exists('lograduro', $result) ? $result["logradouro"] : '';
+            $this->street = array_key_exists('logradouro', $result) ? $result["logradouro"] : '';
         }elseif($result["statusText"] = 'invalid')
         {
             $this->valid = 0;
