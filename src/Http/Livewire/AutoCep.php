@@ -103,6 +103,8 @@ class AutoCep extends Component
         }elseif($result["statusText"] == 'no_connection')
         {
             Log::warning('Connection to CEP server couldnt be established!');
+        }elseif($result["statusText"] == 'connection_error'){
+            Log::warning('Connection error, probably wrong API Key or limit reached!');
         }else
         {
             Log::warning('Unknown error trying to get CEP!');
