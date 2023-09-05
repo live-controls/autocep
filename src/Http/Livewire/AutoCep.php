@@ -50,11 +50,12 @@ class AutoCep extends Component
         if(!is_null($this->oldmodel))
         {
             $this->firststart = true;
-            $this->cep = $this->oldmodel->{$this->prefix.'areacode'};
-            $this->street = $this->oldmodel->{$this->prefix.'road'};
-            $this->area = $this->oldmodel->{$this->prefix.'area'};
-            $this->uf = $this->oldmodel->{$this->prefix.'state'};
-            $this->city = $this->oldmodel->{$this->prefix.'city'};
+            $this->cep = $this->oldmodel->{$this->prefix.$this->areacodeName};
+            $this->cepvalue = $this->cep;
+            $this->street = $this->oldmodel->{$this->prefix.$this->streetName};
+            $this->area = $this->oldmodel->{$this->prefix.$this->areaName};
+            $this->uf = $this->oldmodel->{$this->prefix.$this->ufName};
+            $this->city = $this->oldmodel->{$this->prefix.$this->cityName};
         }
     }
 
