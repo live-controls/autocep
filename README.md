@@ -2,6 +2,8 @@
  ![Release Version](https://img.shields.io/github/v/release/live-controls/autocep)
  ![Packagist Version](https://img.shields.io/packagist/v/live-controls/autocep?color=%23007500)
 
+**THIS PROJECT WON'T BE UPDATED ANYMORE, USE ITS SUCCESSOR [live-controls/autoaddress](https://www.github.com/live-controls/autoaddress)** 
+
  An Input for CEP which would give you the informations for road, etc. based on CepAberto
 
 ## Requirements
